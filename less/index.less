@@ -57,3 +57,123 @@ html, body {
     height: 100%;
 }
 
+/* Brendan's Less CSS for Resume.example project */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0px solid black;
+	//margin: 1% 1%;
+}
+//Font imports
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+//Font usage
+@main-font:'Rubik', sans-serif;
+
+//Variables
+@main-color:blue;
+
+//Mix-ins
+.flexjus(){
+	display: flex;
+	justify-content: center;
+}
+.line(){
+	border-bottom: 2px solid black;
+}
+//Body
+body{
+	font-family: @main-font;
+}
+
+//Navigation Bar, Head
+nav{
+	box-shadow: inset 0px 0px 2px black;
+	ul{
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+
+		li{
+			padding: 0.5% 0.5%;
+			margin: 1% 0%;
+			background-color: white;
+			border-radius: 10px;
+			a{
+				color:grey;
+				text-decoration: none;
+			}
+		}
+		li:hover{
+			background-color: lightgrey;
+			a{
+				color:black;
+			}
+		}
+
+	}
+}
+
+.showcase{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 11%;
+	background-image: url(/img/orus.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	h1{
+		font-size: 5rem;
+		color: white;
+		text-align: center;
+		text-shadow: 0px 3px 0px black;
+	}
+	p{
+		color:white;
+		font-size: 1.5rem;
+		padding: 3% 0%;
+		text-shadow: 0px 3px 0px black;
+	}
+}
+
+.sect1{
+	display: flex;
+	justify-content: space-around;
+	padding: 150px 0%;
+	background-color:#F9F9F9;
+	.boxinfo{
+		margin: 1% 7.5%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: 3% 1%;
+		border-radius: 5px;
+		box-shadow: 0px 0px 2px black;
+		background-color: white;
+
+		h2{
+			font-size: 4rem;
+			text-align: center;
+			padding: 2% 1%;
+			margin: 0% 10%;
+			.line();
+		}
+		p{
+			margin-top: 7%;
+			padding:1%;
+			text-align: center;
+		}
+	}
+}
